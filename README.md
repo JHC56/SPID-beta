@@ -1,7 +1,5 @@
 # SPID: Split-based Prompt Injection Detector
 
-Official implementation of **SPID** (**S**plit-based **P**rompt **I**njection **D**etector).
-
 A lightweight pre-filter that blocks obvious prompt injection attacks before they reach expensive LLM APIs.
 
 <p align="center">
