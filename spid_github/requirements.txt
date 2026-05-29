@@ -1,0 +1,11 @@
+transformers==4.46.0
+accelerate
+datasets
+evaluate
+scikit-learn
+pandas
+sentencepiece
+protobuf
+torch
+huggingface_hub
+google-generativeai
