@@ -4,7 +4,7 @@
 A lightweight pre-filter that blocks obvious prompt injection attacks before they reach expensive LLM APIs.
 
 <p align="center">
-  <a href="https://huggingface.co/your-username/spid-deberta-base"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow" alt="HuggingFace"></a>
+  <a href="https://huggingface.co/JHC04567/spid-deberta-base"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow" alt="HuggingFace"></a>
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/model-DeBERTa--v3--base-blue.svg" alt="Model">
 </p>
@@ -165,7 +165,7 @@ All training code is open-sourced. To handle attack patterns SPID misses, fine-t
   title  = {SPID: Split-based Prompt Injection Detector},
   author = {JHC56},
   year   = {2026},
-  url    = {https://huggingface.co/your-username/spid-deberta-base}
+  url    = {https://huggingface.co/JHC04567/spid-deberta-base}
 }
 ```
 &nbsp;
