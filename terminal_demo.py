@@ -121,7 +121,7 @@ def spid_pipeline(text):
     return result
 
 
-# ─── Gemini function ───────────────────────────────────────────────────
+#  Gemini function 
 def call_gemini(user_input):
     start = time.time()
     try:
