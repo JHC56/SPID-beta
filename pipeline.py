@@ -10,9 +10,7 @@ from config import DEVICE, MAX_LEN, MODEL_NAME
 from utils import split_sentence
 
 
-# ═══════════════════════════════════════════════════════════════════
 #  SPID Classifier
-# ═══════════════════════════════════════════════════════════════════
 
 class SPIDPipeline:
     """SPID: Split-based Prompt Injection Detector.
@@ -118,9 +116,7 @@ class SPIDPipeline:
         return result
 
 
-# ═══════════════════════════════════════════════════════════════════
 #  OOD pipeline evaluation
-# ═══════════════════════════════════════════════════════════════════
 
 def evaluate_pipeline_ood(pipe, ood_data, ood_labels, spid_preds_final):
     """Run full pipeline (splitting) on OOD data."""
