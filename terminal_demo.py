@@ -17,11 +17,11 @@ import re
 from getpass import getpass
 
 
-# ─── Config ────────────────────────────────────────────────────────────
+# Config
 SPID_MODEL_PATH = os.environ.get("SPID_MODEL_PATH", "./spid-deberta-base")
 
 
-# ─── Dependency check ──────────────────────────────────────────────────
+# Dependency check 
 try:
     import torch
     import google.generativeai as genai
@@ -33,7 +33,7 @@ except ImportError as e:
     sys.exit(1)
 
 
-# ─── Gemini setup ──────────────────────────────────────────────────────
+# Gemini setup 
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     api_key = getpass("Enter Gemini API Key: ").strip()
@@ -42,7 +42,7 @@ GEMINI_MODEL = "gemini-2.5-flash-lite"
 gemini = genai.GenerativeModel(GEMINI_MODEL)
 
 
-# ─── Load SPID ─────────────────────────────────────────────────────────
+# Load SPID 
 print(f"Loading SPID from {SPID_MODEL_PATH}...")
 
 if not os.path.isdir(SPID_MODEL_PATH):
@@ -74,7 +74,7 @@ TEMPERATURE = cfg["temperature"]
 THRESHOLD = cfg["threshold"]
 
 
-# ─── SPID functions ────────────────────────────────────────────────────
+# SPID functions 
 CONJUNCTIONS = [
     'but', 'however', 'although', 'though', 'while', 'whereas',
     'and', 'or', 'so', 'yet', 'because', 'since', 'as', 'when',
@@ -141,7 +141,7 @@ def call_gemini(user_input):
         return {"success": False, "error": str(e), "time_ms": int((time.time() - start) * 1000)}
 
 
-# ─── Main loop ─────────────────────────────────────────────────────────
+# Main loop 
 def process_input(user_input):
     spid_start = time.time()
     spid_result = spid_pipeline(user_input)
