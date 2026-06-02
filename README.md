@@ -18,8 +18,6 @@ A lightweight pre-filter that blocks obvious prompt injection attacks before the
 &nbsp;
 &nbsp;
 &nbsp;
-## Abstract
-
 <p align="justify">
 LLMs like Gemini, Claude, and ChatGPT can block prompt injections themselves—but at the cost of API tokens. SPID is a lightweight (1.5GB, CPU-friendly) pre-filter that catches obvious injections before they reach the expensive LLM, reducing API costs. Its key idea is splitting input into fragments and classifying each independently, catching attacks hidden behind benign prefixes. SPID is a cost-saving pre-filter, not a standalone security layer.
 </p>
