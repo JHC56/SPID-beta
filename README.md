@@ -1,7 +1,8 @@
 # SPID: Split-based Prompt Injection Detector
 
-
-A lightweight pre-filter that blocks obvious prompt injection attacks before they reach expensive LLM APIs.
+>A lightweight pre-filter that blocks obvious prompt injection attacks before they reach expensive LLM APIs.
+>
+>If this project helped you, drop a ⭐ to help spread the word!
 
 <p align="center">
   <a href="https://huggingface.co/JHC04567/spid-deberta-base"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow" alt="HuggingFace"></a>
