@@ -2,10 +2,6 @@
 >A lightweight pre-filter that blocks obvious prompt injection attacks before they reach expensive LLM APIs.
 
 <p align="center">
-  If this project helped you, drop a ⭐ to help spread the word!
-</p>
-
-<p align="center">
   <a href="https://huggingface.co/JHC04567/spid-deberta-base"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow" alt="HuggingFace"></a>
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
   <img src="https://img.shields.io/badge/model-DeBERTa--v3--base-blue.svg" alt="Model">
