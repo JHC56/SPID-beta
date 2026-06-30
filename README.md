@@ -71,14 +71,17 @@ User Input
 &nbsp;
 ## Results
 
-Out-of-distribution evaluation on JailbreakHub Dec 2023 (n=1000):
+Composite injection — synthetic (n=600: 300 attack / 300 benign).
+Attacks: `benign request + conjunction + hidden injection` (real deepset/Gandalf payloads). Split pipeline vs. **same classifier at matched recall** (0.94).
 
 | Mode | Precision | Recall | F1 |
 |:-----|----------:|-------:|---:|
-| Classifier (default) | 0.94 | 0.46 | 0.62 |
-| Pipeline (with split) | 0.79 | 0.71 | 0.75 |
+| Classifier @ matched recall | 0.85 | 0.94 | — |
+| **Pipeline (split)** | **0.98** | 0.94 | **0.96** |
 
-The default classifier mode favors precision to avoid blocking legitimate requests. The pipeline mode trades precision for higher recall.
+Splitting wins: +0.14 precision at matched recall (PR-AUC 0.97), rescuing +84 of 300 attacks with 0 added false positives.
+
+*Caveats:* near-best-case (split on SPID's own conjunctions); payloads overlap training data; small benign control (n=150).
 
 &nbsp;
 &nbsp;
@@ -139,6 +142,7 @@ All training code is open-sourced. To handle attack patterns SPID misses, fine-t
 - English only
 - Not designed for obfuscated (base64, leetspeak) or multi-turn attacks
 - Best used as a cost-saving pre-filter, not a standalone security layer
+- Splitting helps only for conjunction-separated composite injections, measured under near-best-case, partly in-distribution conditions.
 
 &nbsp;
 &nbsp;
