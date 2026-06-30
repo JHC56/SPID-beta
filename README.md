@@ -74,9 +74,11 @@ User Input
 Composite injection — synthetic (n=600: 300 attack / 300 benign).
 
 Attacks: `benign request + conjunction + hidden injection` (real deepset/Gandalf payloads). 
+
 &nbsp;
 &nbsp;
 &nbsp;
+
 Split pipeline vs. **same classifier at matched recall** (0.94).
 
 | Mode | Precision | Recall | F1 |
